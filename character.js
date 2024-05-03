@@ -15,6 +15,6 @@ class Character {
 }
 
 // 스킬 객체 생성 함수
-function createSkill(name, effect) {
-    return { name, effect };
+function createSkill(name, effect, description) {
+    return { name, effect, description };
 }

@@ -6,11 +6,9 @@
     <link rel="icon" href="assets/Anime Dual logo.png"/>
     <link rel="apple-touch-icon" href="assets/Anime Dual logo.png"/>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <script src="character.js"></script>
-    <script src="ryomenSukuna.js"></script>
-    <script src="kamadoTanjiro.js"></script>
-    <script src="monkeyDLuffy.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>Anime Dual</title>
+    
 </head>
 <body>
     
@@ -18,26 +16,66 @@
         <div id="siteName">
             Anime Dual
         </div>
+        <div>
+            원하는 캐릭터를 고르세요.
+        </div>
     </header>
     <div id="characterSelection">
-        <button class="characterBtn" data-character="Ryomen Sukuna">
-            <div>
-                <img src="assets/ryomenSukuna.jpeg" alt="Ryomen Sukuna">
-            </div>
+        <div id="characterShow">
+            <button class="characterBtn" data-character="Ryomen Sukuna">
+                <div>
+                    <img src="assets/ryomenSukuna.jpeg" alt="Ryomen Sukuna">
+                </div>
+            </button>
             <span>Ryomen Sukuna</span>
-        </button>
-        <button class="characterBtn" data-character="Kamado Tanjiro">
-            <div>
-                <img src="assets/kamadoTanjiro.jpg" alt="Kamado Tanjiro">
-            </div>
+            <button class="informationBtn" data-character="Ryomen Sukuna" title="캐릭터 정보 보기">
+                <span class="material-symbols-outlined">
+                    info
+                    </span>
+            </button>
+        </div>
+        <div id="characterShow">
+            <button class="characterBtn" data-character="Kamado Tanjiro">
+                <div>
+                    <img src="assets/kamadoTanjiro.jpg" alt="Kamado Tanjiro">
+                </div>
+            </button>
             <span>Kamado Tanjiro</span>
-        </button>
-        <button class="characterBtn" data-character="Monkey D. Luffy">
-            <div>
-                <img src="assets/monkeyDLuffy.webp" alt="Monkey D. Luffy">
-            </div>
+            <button class="informationBtn" data-character="Kamado Tanjiro">
+                <span class="material-symbols-outlined">
+                    info
+                    </span>
+            </button>
+        </div>
+        <div id="characterShow">
+            <button class="characterBtn" data-character="Monkey D. Luffy">
+                <div>
+                    <img src="assets/monkeyDLuffy.webp" alt="Monkey D. Luffy">
+                </div>
+            </button>
             <span>Monkey D. Luffy</span>
-        </button>
+            <button class="informationBtn" data-character="Monkey D. Luffy">
+                <span class="material-symbols-outlined">
+                    info
+                    </span>
+            </button>
+        </div>
     </div>
+    <!-- 캐릭터 정보를 표시할 모달 -->
+    <div id="characterModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalCharacterName">Character Information</h2>
+            <p id="modalCharacterHp"></p>
+            <p id="modalCharacterMp"></p>
+            <p> Skills</p>
+            <ul id="modalCharacterSkills"></ul>
+        </div>
+    </div>
+    <script src="character.js"></script>
+    <script src="ryomenSukuna.js"></script>
+    <script src="kamadoTanjiro.js"></script>
+    <script src="monkeyDLuffy.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

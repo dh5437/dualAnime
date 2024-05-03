@@ -7,7 +7,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
     url("assets/Anime Dual Header.png");
     background-size: cover;
     color: white;
@@ -22,33 +22,49 @@ body {
     align-items: center;    
 }
 
-.characterBtn {
+#characterShow {
     width: 200px;
-    height: 200px;
-    color: white;
-    font-size: 18px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 600;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    color: white;
+    font-size: 18px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+.characterBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .characterBtn img {
     width: 100%;  /* 이미지 너비를 div에 맞춤 */
     height: 150px; /* 이미지 높이 설정 */
     object-fit: cover; /* 이미지 비율을 유지하면서 div에 맞춤 */
-    border-radius: 50%;
+    border-radius: 50%;   
 }
 
-.characterBtn span {
+#characterShow span {
     text-align: center; /* 텍스트를 중앙 정렬 */
-    padding-top: 20px;
+    padding-top: 10px;
+}
+
+.informationBtn {
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    margin-right: 20px;
+    color: white;
+    /* font-size: 14px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400; */
 }
 
 #siteName {
@@ -59,4 +75,47 @@ body {
     font-size: 28px;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 15px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.modal-content ul {
+    list-style:none;
+    padding-left:0px;
+    font-size: 15px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
