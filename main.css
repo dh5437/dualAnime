@@ -1,0 +1,62 @@
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("assets/Anime Dual Header.png");
+    background-size: cover;
+    color: white;
+}
+
+#characterSelection {
+    width: 1000px;
+    height: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+}
+
+.characterBtn {
+    width: 200px;
+    height: 200px;
+    color: white;
+    font-size: 18px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.characterBtn img {
+    width: 100%;  /* 이미지 너비를 div에 맞춤 */
+    height: 150px; /* 이미지 높이 설정 */
+    object-fit: cover; /* 이미지 비율을 유지하면서 div에 맞춤 */
+    border-radius: 50%;
+}
+
+.characterBtn span {
+    text-align: center; /* 텍스트를 중앙 정렬 */
+    padding-top: 20px;
+}
+
+#siteName {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+    font-size: 28px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
