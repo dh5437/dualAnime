@@ -3,22 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="battle.js"></script>
+    <link rel="stylesheet" type="text/css" href="battle.css">
     <title>BattlePage</title>
+    
 </head>
 <body>
-    <div id="battlefield">
-        <div id="player" data-hp="100">
-          <h2>Player: <span id="playerName"></span></h2>
-          <p>HP: <span id="playerHP">100</span></p>
-          <button class="skillBtn">Attack</button>
+    <div id="battleArea">
+        <div id="player" class="combatant">
+            <h2>Player: <span id="playerName">Player Name</span></h2>
+            <img id="playerImage" alt="Player Image" class="combatantImg">
+            <p>HP: <span id="playerHP">100</span></p>
+            <p>MP: <span id="playerMP">100</span></p>
+            <div class="skills">
+                <button class="playerSkillBtn">Skill 1</button>
+                <button class="playerSkillBtn">Skill 2</button>
+                <button class="playerSkillBtn">Skill 3</button>
+                <button class="playerSkillBtn">Skill 4</button>
+            </div>
         </div>
-        <div id="opponent" data-hp="100">
-          <h2>Opponent: <span id="opponentName"></span></h2>
-          <p>HP: <span id="opponentHP">100</span></p>
+        <div id="opponent" class="combatant">
+            <h2>Opponent: <span id="opponentName">Opponent Name</span></h2>
+            <img id="opponentImage" alt="Opponent Image" class="combatantImg">
+            <p>HP: <span id="opponentHP">100</span></p>
+            <p>MP: <span id="opponentMP">100</span></p>
+            <div class="skills">
+                <div class="oponentSkillDiv">Skill 1</div>
+                <div class="oponentSkillDiv">Skill 2</div>
+                <div class="oponentSkillDiv">Skill 3</div>
+                <div class="oponentSkillDiv">Skill 4</div>
+            </div>
         </div>
-      </div>
+    </div>
+    <div id="battleLogs" class="battle-logs">
+        <h3>Battle Logs</h3>
+        <ul id="logList"></ul>
+    </div>    
       
-    
+    <script src="character.js"></script>
+    <script src="ryomenSukuna.js"></script>
+    <script src="kamadoTanjiro.js"></script>
+    <script src="monkeyDLuffy.js"></script>
+    <script src="battle.js"></script>
 </body>
 </html>

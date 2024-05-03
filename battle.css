@@ -1,0 +1,51 @@
+#battleArea {
+    display: flex;
+    justify-content: space-around; /* Center the combatants on the page */
+    padding: 20px;
+}
+
+.combatant {
+    flex: 1; /* Each combatant takes equal width */
+    margin: 0 20px; /* Add space between combatants */
+    text-align: center; /* Center the text and buttons */
+    border: 2px solid black; /* Add border for clarity */
+    padding: 10px;
+    background-color: lightgray; /* Background color for visibility */
+}
+
+.combatantImg {
+    width: auto; /* Set a fixed width for images */
+    height: 200px; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+.skills {
+    display: flex;
+    justify-content: center; /* Center the skill buttons */
+    gap: 10px; /* Add space between buttons */
+}
+
+.playerSkillBtn {
+    padding: 5px 10px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    background-color: navy; /* Background color for the button */
+    color: white; /* Text color for the button */
+    border: none; /* Remove border */
+}
+
+.oponentSkillDiv {
+    padding: 5px 10px; /* Padding inside the button */
+    background-color: navy; /* Background color for the button */
+    color: white; /* Text color for the button */
+    border: none; /* Remove border */
+}
+
+.battle-logs {
+    width: 100%;
+    height: 200px;
+    overflow-y: auto; /* 로그가 많아지면 스크롤바가 나타납니다 */
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
