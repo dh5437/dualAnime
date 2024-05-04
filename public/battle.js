@@ -138,8 +138,6 @@ function updateHealth() {
 function updateMana() {
     document.getElementById('playerMP').textContent = playerCharacter.mp;
     document.getElementById('opponentMP').textContent = opponentCharacter.mp;
-
-    checkGameOver();
 }
 
 function checkGameOver() {
