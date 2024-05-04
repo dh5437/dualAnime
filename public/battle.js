@@ -83,11 +83,24 @@ function executeSkill(skill, index) {
 
     skill.effect(playerCharacter, opponentCharacter);
 
+    // HP와 MP가 최대 200을 초과하지 않도록 조정
+    if (playerCharacter.hp > 200) {
+        playerCharacter.hp = 200; // HP가 200을 초과할 경우 200으로 설정
+        alert("HP cannot exceed 200.");
+        return;
+    }
+
+    if (playerCharacter.mp > 200) {
+        playerCharacter.mp = 200; // MP가 200을 초과할 경우 200으로 설정
+        alert("MP cannot exceed 200.");
+        return;
+    }
+
     logEvent(skill, playerCharacter, opponentCharacter);
     updateHealth();
     updateMana();
 
-    setTimeout(aiUseSkill, 1000);
+    setTimeout(aiUseSkill, 500);
 }
 
 function aiUseSkill() {
